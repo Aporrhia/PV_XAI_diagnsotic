@@ -124,7 +124,7 @@ def generate_diagnostic_report(prediction, method_name, contributions, anomaly_c
 
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash-lite",
+            model="gemini-3-flash-preview",
             contents=user_message,
             config=types.GenerateContentConfig(
                 system_instruction=system_instruction,
