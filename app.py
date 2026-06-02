@@ -477,7 +477,7 @@ if df is not None:
                             s_time = time.time() - start_s
                             s_base = getattr(sh_val, 'base_values', [0])
                             s_vals = getattr(sh_val, 'values', [[0]])
-                            s_error = abs(ml_pred - (s_base[0] + np.sum(s_vals[0])))
+                            s_error = abs(ml_pred - (s_base[0] + np.sum(s_vals[0])))  # SHAP error
 
                             l_rank = (1.5 * l_error) + (0.5 * l_time)  # LIME rank
                             s_rank = (1.5 * s_error) + (0.5 * s_time)  # SHAP rank
